@@ -1,0 +1,4 @@
+take
+use
+drop
+give

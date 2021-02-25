@@ -1,0 +1,14 @@
+cell-phone
+key
+vial-b
+vial-s
+umbrella
+heater-coil
+cookies
+laser-pointer
+axe
+red-fidget-spinner
+health-potion
+cell-charger
+emerald
+

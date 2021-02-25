@@ -1,0 +1,8 @@
+******HELP MENU******
+Valid Commands are:
+take,drop,use,give - commands
+cell phone, umbrella etc. - items
+n,s,e,w - directions
+q - quit
+h - help
+i - inventory

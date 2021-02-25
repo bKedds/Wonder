@@ -1,0 +1,4 @@
+This is the safe room.
+There are 2 exits, 1 west and 1 east.
+There is some treasure here.
+

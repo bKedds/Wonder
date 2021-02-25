@@ -1,0 +1,662 @@
+	TEST PLAN FOR WONDER GAME********
+ 
+ *  do multiple run-throughs to test various components of game
+ *  Run1: Test female character, basic functionality, multiple direction commands, adding items to inv. and viewing them, using key, dying by quick sand pit
+ *  Expected:
+ *  Game instructions printed to screen
+ *  Choose f when prompted for gender - Greeting is output and names you Alice.
+ *  Location 1 info output to screen
+ *  Attempt all directions but east, using various commands: n,go s, west - "You cant go in that direction"
+ *  Finally, use command "go east"
+ *  Location 2 info output to screen.
+ *  Items laying around : vial-b,vial-s,key
+ *  Take all items - message confirming items taken is output
+ *  Check inventory - items appear in inventory menu with descriptions
+ *  attempt all directions to exit room - you cant go in that direction
+ *  "use key" - unlocks door to the east
+ *  go east- now able to go east to room 3
+ *  Room 3 info and items printed.
+ *  Go east
+ *  Room 4 info printed with character info
+ *  north
+ *  Room 5 info printed with character info
+ *  east
+ *  Room 9 - quick sand pit - Game over info is output, final score is printed and Game ends
+ *  ACTUAL:
+ *$ java Components.Game
+ *                                         **********WONDERLAND***********
+ *
+ * 1. Wonderland is a text-based adventure game, loosely based on Alice in Wonderland, but with some moder
+ * 2. You will play as either Alice, or Alister depending on what gender you choose.
+ * 3. The game consists of a series of rooms, with various numbers of exits, items and characters.
+ * 4. You interact with the game by entering simple commands and hitting enter.
+ * 5. For instance, if you want to go north, simply type go north, go n, n or north.
+ * 6. You can also interact with items in the game by using commands such as: "take","drop","use" and "giv
+ * 7. You can interact with characters you meet typing "speak".
+ * 8. As an example: you enter a room with a lollipop in it. Type "take key", and it will be added to your
+ * 9. Conversely, "drop key" would remove it from your inventory.
+ * 10. To check your inventory at any time, type "i, invent or inventory". This will pull up a list of ite
+ * 11. The goal of the game is to make it through the maze of wonderland, get your phone back, and use it
+ * to check your Instagram.
+ * 12. To complete the game you will be required to make a series of item trades with characters in order
+ * to the location where the queen is, and the ultimate prize, your cell phone.
+ * 13. If you forget valid commands any time, type "h" or "help" to bring up the commands menu.
+ * 14. Type "score" to display your current score.
+ * 15. Type "q" or "Q" to quit.
+ *
+ *                                         *********************************
+ *
+ * Please choose a gender, M or F
+ * f
+ *
+ * Hello, and welcome to Wonderland.
+ * For the purposes of this game, we will call you Alice.
+ * Your current HP is 100.
+ *
+ * You are at the park taking selfies.
+ * A white rabbit runs up and steals your phone.
+ * He goes down a rabbit hole to the east.
+ * It looks like you can fit in the hole.
+ *
+ * > n
+ * You can't go in that direction!
+ *
+ * > go s
+ * go s
+ * You can't go in that direction!
+ *
+ * > west
+ * You can't go in that direction!
+ *
+ * > go east
+ * go east
+ * You fell down the rabbit hole and are now in a Grand Hall.
+ * There is only 1 exit.
+ * It looks like the door to the east is locked.
+ * You are unable to get back through the rabbit hole.
+ *
+ *
+ *
+ * Items laying around:
+ * vial-b
+ * vial-s
+ * key
+ *
+ * > take vial-b
+ * vial-b taken!
+ * > take vial-s
+ * vial-s taken!
+ * > take key
+ * key taken!
+ * > i
+ * Inventory:
+ * vial-b: A vial of mysterious liquid, marked with a B.
+ * vial-s: A vial of mysterious liquid, marked with a S.
+ * key: A rusty key.
+ *
+ * > west
+ * You can't go in that direction!
+ *
+ * > north
+ * You can't go in that direction!
+ *
+ * > south
+ * You can't go in that direction!
+ *
+ * > east
+ * You can't go in that direction!
+ *
+ * > use key
+ * You were able to unlock the door to the east!
+ *
+ * > east
+ * You are in a large forrest.
+ * There are several exits.
+ * The south exit is blocked by a fallen tree.
+ * There is an umbrella that the rabbit dropped.
+ *
+ * Items laying around:
+ * umbrella
+ *
+ * > east
+ * You are in a rabbit's house.
+ * This appears to be the home of that rabbit that stole your phone.
+ * There are multiple exits.
+ *
+ * Items laying around:
+ * Characters here are:
+ * White Rabbit
+ *
+ * > north
+ * You are in talking flowers field.
+ * There are talking flowers everywhere!
+ * One of the exits is blocked by a caterpillar trying to vape.
+ * He appears disgruntled that his vape isn't working.
+ *
+ * Items laying around:
+ * Characters here are:
+ * The Caterpillar
+ *
+ * > east
+ * You have fallen into a pit of quick sand.
+ * The sand slowly consumes you.
+ * The faster you move, the faster you sink.
+ * Game over.
+ * Your final score: 30
+
+*******	Run 2 : Test male character, full game runthrough, multiple direction commands, take, use, give, drop and speak, inventory and help, score, get killed by Queen at end.
+
+Expected: game instructions shown
+* choose m - greeting includes name Alister
+* location1 info shown
+* use miltiple direction commands - only east works 
+* location2 info shown
+* take all items
+* items taken confirmed
+* check inventory with invent
+* inventory shown
+* use vial-b - you grew bigger
+* use vial-s - you got smaller
+* use key - door unlocked
+* go east 
+* Room 3 info shown
+* take umbrella
+* check inventory with i
+* inventory shown
+* use umbrella - You opened the umbrella, careful you dont blow away
+* go east
+* Location 4 info and character shown
+* use speak command
+* Hello, my name is Alister.
+* Rabbit speaks back and tells you what he needs
+* give umbrella
+* get heater-coil
+* i to check that inventory has changed 
+* north
+* Location 5 info shown and character
+* speak
+* Caterpillar speaks
+* give heater-coil, get laser-pointer
+* west
+* Location 6 info and character shown
+* speak
+* Cat tells you what he needs
+* give laser-pointer
+* get cookies
+* north to safe room
+* safe room info shown and items
+* take emerald and health-potion
+* check inventory 
+* inventory is updated
+* use emerald - it is beautiful but you cant use it here.
+* use health-potion - your health went up to 110
+* west to hatters
+* location and character info shown
+* speak
+* hatter tells you what he needs 
+* give cookies - get axe and fidget-spinner
+* check inventory with i
+* inventory is updated
+* use axe - you cant use it here
+* use fidget-spinner: you cant use it here
+* east
+* You are in jungle, you have been here before
+* speak, they have nothing else to say
+* south
+* forrest- you have been here before
+* use axe
+* you chopped tree and opened exit south
+* go south
+* queens domain info and character shown
+* speak
+* give me something or i'll cut your head off
+* give emerald
+* queen is not happy
+* speak
+* queen cuts off your head, game over.
+	ACTUAL:
+
+$ java Components.Game
+                                        **********WONDERLAND***********
+
+1. Wonderland is a text-based adventure game, loosely based on Alice in Wonderland, but with some modern twists.
+2. You will play as either Alice, or Alister depending on what gender you choose.
+3. The game consists of a series of rooms, with various numbers of exits, items and characters.
+4. You interact with the game by entering simple commands and hitting enter.
+5. For instance, if you want to go north, simply type go north, go n, n or north.
+6. You can also interact with items in the game by using commands such as: "take","drop","use" and "give".
+7. You can interact with characters you meet typing "speak".
+8. As an example: you enter a room with a lollipop in it. Type "take key", and it will be added to your inventory.
+9. Conversely, "drop key" would remove it from your inventory.
+10. To check your inventory at any time, type "i, invent or inventory". This will pull up a list of items you have.
+11. The goal of the game is to make it through the maze of wonderland, get your phone back, and use it
+to check your Instagram.
+12. To complete the game you will be required to make a series of item trades with characters in order to make it
+to the location where the queen is, and the ultimate prize, your cell phone.
+13. If you forget valid commands any time, type "h" or "help" to bring up the commands menu.
+14. Type "score" to display your current score.
+15. Type "q" or "Q" to quit.
+
+                                        *********************************
+
+Please choose a gender, M or F
+m
+
+Hello, and welcome to Wonderland.
+For the purposes of this game, we will call you Alister.
+Your current HP is 100.
+
+You are at the park taking selfies.
+A white rabbit runs up and steals your phone.
+He goes down a rabbit hole to the east.
+It looks like you can fit in the hole.
+
+> north
+You can't go in that direction!
+
+> south
+You can't go in that direction!
+
+> w
+You can't go in that direction!
+
+> e
+You fell down the rabbit hole and are now in a Grand Hall.
+There is only 1 exit.
+It looks like the door to the east is locked.
+You are unable to get back through the rabbit hole.
+
+
+
+Items laying around:
+vial-b
+vial-s
+key
+
+> take vial-b
+vial-b taken!
+> take vial-s
+vial-s taken!
+> take key
+key taken!
+> invent
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+
+> use vial-b
+You grew bigger!
+
+> use vial-s
+You got smaller!
+
+> use key
+You were able to unlock the door to the east!
+
+> east
+You are in a large forrest.
+There are several exits.
+The south exit is blocked by a fallen tree.
+There is an umbrella that the rabbit dropped.
+
+Items laying around:
+umbrella
+
+> take umbrella
+umbrella taken!
+> i
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+umbrella: The umbrella that the rabbit dropped.
+
+> use umbrella
+You opened the umbrella, careful you don't blow away!
+
+> east
+You are in a rabbit's house.
+This appears to be the home of that rabbit that stole your phone.
+There are multiple exits.
+
+Items laying around:
+Characters here are:
+White Rabbit
+
+> speak
+You: Hello, my name is Alister.
+them: I have lost my umbrella. The queen stole your phone from me but if you can find my umbrella I will give you something helpful.
+
+> give umbrella
+You gave the umbrella to the rabbit.
+You got a heater-coil from the rabbit.
+
+> i
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+heater-coil: A heater coil for some sort of vaporizer.
+
+> north
+You are in talking flowers field.
+There are talking flowers everywhere!
+One of the exits is blocked by a caterpillar trying to vape.
+He appears disgruntled that his vape isn't working.
+
+Items laying around:
+Characters here are:
+The Caterpillar
+
+> speak
+You: Hello, my name is Alister.
+them: I am trying to get my vaporizer working. If you can't help me then leave me alone.
+
+> give heater-coil
+You gave the heater-coil to the caterpillar.
+You got a laser-pointer from the caterpillar and he slunk away.
+
+> i
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+laser-pointer: A laser pointer.
+
+> west
+You are in a dense jungle.
+There is a strange cat hiding in the trees.
+It is very hot.
+There are several exits.
+
+
+Items laying around:
+Characters here are:
+The Cheshire Cat
+
+> speak
+You: Hello, my name is Alister.
+them: I'm so bored. If you find something to entertain me I may have something for you.
+
+> give laser-pointer
+You gave the laser-pointer to the cheshire cat.
+You got a box of cookies from the cat and he disappeared.
+
+> north
+This is the safe room.
+There are 2 exits, 1 west and 1 east.
+There is some treasure here.
+
+Items laying around:
+emerald
+health-potion
+
+> take emerald
+emerald taken!
+> take health-potion
+health-potion taken!
+> i
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+cookies: A box of cookies, half eaten.
+emerald: A green emerald.
+health-potion: A magic potion
+
+> use emerald
+This is a beautiful emerald but you can't use it.
+
+> use health-potion
+Your health went up to 110!
+
+> west
+You are at the Mad Hatter's tea party.
+He seems a little bit off.
+I wonder what's in that tea he is drinking?
+
+Items laying around:
+Characters here are:
+Mad Hatter
+
+> speak
+You: Hello, my name is Alister.
+them: I need cookies for my tea party. If you find some I will reward you.
+
+> give cookies
+You gave the cookies to the mad hatter.
+You got an axe and a red-fidget-spinner from the hatter and he vanished.
+
+> i
+Inventory:
+vial-b: A vial of mysterious liquid, marked with a B.
+vial-s: A vial of mysterious liquid, marked with a S.
+key: A rusty key.
+emerald: A green emerald.
+health-potion: A magic potion
+axe: A sharp axe.
+red-fidget-spinner: A beautiful red fidget spinner with hearts on it.
+
+> use axe
+You can't use this here.
+
+> use red-fidget-spinner
+This fidget spinner looks fun, but you can't use it here.
+
+> east
+You are in a jungle. You have been here before.
+Items laying around:
+Characters here are:
+The Cheshire Cat
+
+> speak
+They have nothing else to say.
+
+> south
+You are in a forrest. You have been here before.
+Items laying around:
+
+> use axe
+You chopped the tree and opened an exit to the south!
+
+> south
+You are in the queen's domain.
+Everything here is painted red.
+The queen looks grumpy, best not piss her off.
+
+Items laying around:
+Characters here are:
+Red Queen
+
+> speak
+You: Hello, my name is Alister.
+them: You had better give me an offering and leave or it's off with your head!
+
+> give emerald
+You gave the emerald to the queen, but she doesn't seem happy.
+
+> speak
+The queen chopped off your head, game over.
+
+	RUN 3: Make it through game and win, speed run.
+* get instructions
+* f - get female greeting
+* Location 1 info
+* east - to location 2
+* Location 2 info
+* take key
+* use key - open door to east
+* go east
+* Location 3 info
+* take umbrella
+* east
+* Location 4 info 
+* give umbrella, get heater-coil
+* north to 5
+* 5 info shown
+* give heater-coil, get laser-pointer
+* west
+* location 6 info shown
+* give laser-pointer, get cookies
+* west
+* location 7 info shown
+* give cookies, get axe and spinner
+* east to 6
+* south to 3
+* use axe - open south exit
+* south to queens domain
+* give red-fidget-spinner, get phone
+* use phone to check instagram - game over you win + score. 
+
+	ATCUAL
+$ java Components.Game
+                                        **********WONDERLAND***********
+
+1. Wonderland is a text-based adventure game, loosely based on Alice in Wonderland, but with some modern twists.
+2. You will play as either Alice, or Alister depending on what gender you choose.
+3. The game consists of a series of rooms, with various numbers of exits, items and characters.
+4. You interact with the game by entering simple commands and hitting enter.
+5. For instance, if you want to go north, simply type go north, go n, n or north.
+6. You can also interact with items in the game by using commands such as: "take","drop","use" and "give".
+7. You can interact with characters you meet typing "speak".
+8. As an example: you enter a room with a lollipop in it. Type "take key", and it will be added to your inventory.
+9. Conversely, "drop key" would remove it from your inventory.
+10. To check your inventory at any time, type "i, invent or inventory". This will pull up a list of items you have.
+11. The goal of the game is to make it through the maze of wonderland, get your phone back, and use it
+to check your Instagram.
+12. To complete the game you will be required to make a series of item trades with characters in order to make it
+to the location where the queen is, and the ultimate prize, your cell phone.
+13. If you forget valid commands any time, type "h" or "help" to bring up the commands menu.
+14. Type "score" to display your current score.
+15. Type "q" or "Q" to quit.
+
+                                        *********************************
+
+Please choose a gender, M or F
+f
+
+Hello, and welcome to Wonderland.
+For the purposes of this game, we will call you Alice.
+Your current HP is 100.
+
+You are at the park taking selfies.
+A white rabbit runs up and steals your phone.
+He goes down a rabbit hole to the east.
+It looks like you can fit in the hole.
+
+> east
+You fell down the rabbit hole and are now in a Grand Hall.
+There is only 1 exit.
+It looks like the door to the east is locked.
+You are unable to get back through the rabbit hole.
+
+
+
+Items laying around:
+vial-b
+vial-s
+key
+
+> take key
+key taken!
+> use key
+You were able to unlock the door to the east!
+
+> east
+You are in a large forrest.
+There are several exits.
+The south exit is blocked by a fallen tree.
+There is an umbrella that the rabbit dropped.
+
+Items laying around:
+umbrella
+
+> take umbrella
+umbrella taken!
+> east
+You are in a rabbit's house.
+This appears to be the home of that rabbit that stole your phone.
+There are multiple exits.
+
+Items laying around:
+Characters here are:
+White Rabbit
+
+> give umbrella
+You gave the umbrella to the rabbit.
+You got a heater-coil from the rabbit.
+
+> north
+You are in talking flowers field.
+There are talking flowers everywhere!
+One of the exits is blocked by a caterpillar trying to vape.
+He appears disgruntled that his vape isn't working.
+
+Items laying around:
+Characters here are:
+The Caterpillar
+
+> give heater-coil
+You gave the heater-coil to the caterpillar.
+You got a laser-pointer from the caterpillar and he slunk away.
+
+> west
+You are in a dense jungle.
+There is a strange cat hiding in the trees.
+It is very hot.
+There are several exits.
+
+
+Items laying around:
+Characters here are:
+The Cheshire Cat
+
+> give laser-pointer
+You gave the laser-pointer to the cheshire cat.
+You got a box of cookies from the cat and he disappeared.
+
+> west
+You are at the Mad Hatter's tea party.
+He seems a little bit off.
+I wonder what's in that tea he is drinking?
+
+Items laying around:
+Characters here are:
+Mad Hatter
+
+> give cookies
+You gave the cookies to the mad hatter.
+You got an axe and a red-fidget-spinner from the hatter and he vanished.
+
+> east
+You are in a jungle. You have been here before.
+Items laying around:
+Characters here are:
+The Cheshire Cat
+
+> south
+You are in a forrest. You have been here before.
+Items laying around:
+
+> use axe
+You chopped the tree and opened an exit to the south!
+
+> south
+You are in the queen's domain.
+Everything here is painted red.
+The queen looks grumpy, best not piss her off.
+
+Items laying around:
+Characters here are:
+Red Queen
+
+> give red-fidget-spinner
+You gave the red-fidget-spinner to the queen.
+You got your cell phone back from the queen.
+
+> use cell-phone
+Finally! You can check your Instagram. YOU WIN!
+Game Over. Thanks for playing Wonderland. Your final score is 20
+
+

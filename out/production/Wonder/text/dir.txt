@@ -1,0 +1,13 @@
+n
+north
+s
+south
+e
+east
+w
+west
+i
+inventory
+h
+help
+go

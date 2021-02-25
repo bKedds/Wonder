@@ -1,0 +1,21 @@
+					**********WONDERLAND***********
+
+1. Wonderland is a text-based adventure game, loosely based on Alice in Wonderland, but with some modern twists.
+2. You will play as either Alice, or Alister depending on what gender you choose.
+3. The game consists of a series of rooms, with various numbers of exits, items and characters.
+4. You interact with the game by entering simple commands and hitting enter.
+5. For instance, if you want to go north, simply type go north, go n, n or north.
+6. You can also interact with items in the game by using commands such as: "take","drop","use" and "give".
+7. You can interact with characters you meet typing "speak".
+8. As an example: you enter a room with a lollipop in it. Type "take key", and it will be added to your inventory.
+9. Conversely, "drop key" would remove it from your inventory.
+10. To check your inventory at any time, type "i, invent or inventory". This will pull up a list of items you have.
+11. The goal of the game is to make it through the maze of wonderland, get your phone back, and use it
+to check your Instagram.
+12. To complete the game you will be required to make a series of item trades with characters in order to make it
+to the location where the queen is, and the ultimate prize, your cell phone.
+13. If you forget valid commands any time, type "h" or "help" to bring up the commands menu.
+14. Type "score" to display your current score.
+15. Type "q" or "Q" to quit.
+
+					*********************************

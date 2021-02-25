@@ -1,0 +1,4 @@
+You have fallen into a pit of quick sand.
+The sand slowly consumes you.
+The faster you move, the faster you sink.
+Game over.

@@ -1,0 +1,5 @@
+You are in a large forrest.
+There are several exits.
+The south exit is blocked by a fallen tree.
+There is an umbrella that the rabbit dropped.
+
